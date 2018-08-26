@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+
+html, body {
+    width    : 100%;
+    height   : 100%;
+    margin   : 0;
+    overflow : hidden;
+  }
+  header{
+    text-align: center;
+    
+}
+header h1{
+    color: rgba(13, 19, 1, 0);
+    background-image: url(../image/color5.jpg);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    animation: animate 15s linear infinite;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 40px;
+}
+
+@keyframes animate{
+    0%{
+        background-position: left 0px top 10px;
+    }
+    40%{
+        background-position: left 800px top 10px;
+    }
+}
+header h3{
+    display: inline-block;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 35px;
+    letter-spacing: 10px;
+    background-color: rgba(0, 0, 0, 0.42);
+    border-radius: 10px;
+    padding: 0 8px;
+    color: #000;
+    padding-bottom: 8px;
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+
+}
+
+.container{
+    width: 250px;
+    height: 350px;
+    background: url(../image/rak.jpg) center center no-repeat; 
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 63%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.3)
+}
+.cover{
+    width: 130px;
+    height: 100%;
+    position: absolute;
+    left: -1px;
+    transform: rotateY(-20deg);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all 0.5s ease-in;
+}
+.cover2{
+    width: 130px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    transform: rotateY(20deg);
+    transform-style: preserve-3d;
+    transform-origin: right;
+    transition: all 0.5s ease-in;
+    background-color: #fff;
+}
+.container:hover .cover{
+    transform: rotateY(-145deg);
+    transition: 1s ease-in-out;
+    left: 0;
+}
+.container:hover .cover2{
+    transform: rotateY(145deg);
+    transition: 1s ease-in-out;
+}
+
+.front,
+.back,
+.front2,
+.back2{
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front{
+    background: url(../image/bunting-flag.png) center no-repeat;
+    background-size: cover;
+}
+.front2{
+    background: url(../image/bunting-flag.png) center no-repeat;
+    background-size: cover;
+}
+.back{
+    background: url(../image/rak1.jpg) center center no-repeat;
+    background-size: cover;
+    transform: rotateY(180deg);
+}
+.back2{
+    background: url(../image/rak2.jpg) center center no-repeat;
+    background-size: cover;
+    transform: rotateY(-180deg);
+}
+
+.content{
+    color: #fffff2;
+    margin: 45% auto;
+    padding: 10px;
+    background-color: rgba(0,0,0,.3);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+}
+
+.frnd,
+.sis{
+    color: aqua;
+}
+
+.hpy{
+    transform: rotateZ(-90deg) translateX(-110%);
+    letter-spacing: 10px;
+    font-size: 40px;
+    font-family: 'Courgette', cursive;
+    font-weight: 700;
+}
+
+.front2 .hpy{
+    transform: rotateZ(-90deg) translateX(-130%);
+}
+
+.intro{
+    color: #fff;
+    margin: 10% auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.42);
+    text-align: center;
+    font-family: 'Cookie', cursive;
+    font-size: 20px;
+}
+
+
+
+
+
+footer {
+   text-align: center;
+}
+.box{
+    display: inline-block;
+}
+.hindi,
+.english{
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: inset 0 -1px 1px #9daabb,
+    inset 0 1px 0.125em #0f1110;
+	background: linear-gradient(to right top, #474747, #202020);
+	border-radius: 5px;
+	color: #ECF0F1;
+
+}
+
+.music i{
+    font-size: 30px;
+}
+
+
+@media screen and (max-width: 730px){
+  header h3{
+      font-size: 25px;
+  }
+  header h1{
+      font-size: 25px;
+  }
+}
+@media screen and (max-width: 560px){
+    .container:hover .cover{
+        transform: rotateY(-110deg);
+    }
+    .container:hover .cover2{
+        transform: rotateY(110deg);
+    }
+}
+@media screen and (max-width: 370px){
+    header h1{
+        font-size: 20px;
+    }
+    header h1{
+        font-size: 20px;
+    }
+    .container{
+        top: 66%;
+    }
+  }
+
+  @media screen and (max-width: 321px){
+    header h3{
+        font-size: 15px;
+    }
+    header h1{
+        font-size: 10px;
+    }
+    .container{
+        top: 66%;
+    }
+  }
